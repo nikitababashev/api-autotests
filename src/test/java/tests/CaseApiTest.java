@@ -2,7 +2,6 @@ package tests;
 
 import clients.CaseApi;
 import io.qameta.allure.Epic;
-import io.qameta.allure.Feature;
 import io.qameta.allure.Story;
 import io.restassured.response.Response;
 import net.datafaker.Faker;
