@@ -23,15 +23,6 @@ pipeline {
             }
 
         }
-    }
-
-    post {
-
-        always {
-
-            junit 'build/test-results/test/binary/*.xml'
-
-        }
 
     }
 
