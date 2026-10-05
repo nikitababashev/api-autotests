@@ -28,7 +28,7 @@ pipeline {
 
         always {
 
-            junit 'build/test-results/test/*.xml'
+            junit 'build/test-results/test/binary/*.xml'
 
         }
 
