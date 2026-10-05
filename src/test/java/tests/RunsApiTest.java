@@ -2,6 +2,8 @@ package tests;
 
 import clients.RunsApi;
 import clients.RunsApi.*;
+import io.qameta.allure.Epic;
+import io.qameta.allure.Story;
 import io.restassured.response.Response;
 import net.datafaker.Faker;
 import org.junit.jupiter.api.DisplayName;
@@ -9,11 +11,13 @@ import org.junit.jupiter.api.Test;
 
 import static org.hamcrest.Matchers.*;
 
+@Epic("RunsApiTest")
 public class RunsApiTest {
 
     RunsApi runsApi = new RunsApi();
 
     @Test
+    @Story("Получение списка Test Runs")
     @DisplayName("API-009 Получение списка Test Runs")
     void getListTestRunsTest(){
         int projectId = 1;
@@ -26,6 +30,7 @@ public class RunsApiTest {
     }
 
     @Test
+    @Story("Создание Test Run")
     @DisplayName("API-010 Создание Test Run")
     void createTestRunTest(){
         Faker faker = new Faker();
