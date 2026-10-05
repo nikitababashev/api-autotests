@@ -26,4 +26,11 @@ pipeline {
 
     }
 
+    post {
+        always {
+            junit allowEmptyResults: true,
+                  testResults: 'build/test-results/test/*.xml'
+        }
+    }
+
 }

@@ -26,4 +26,9 @@ java {
 
 test {
     useJUnitPlatform()
+
+    reports {
+        junitXml.required = true
+        html.required = true
+    }
 }
