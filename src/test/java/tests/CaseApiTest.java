@@ -1,6 +1,8 @@
 package tests;
 
 import clients.CaseApi;
+import io.qameta.allure.Epic;
+import io.qameta.allure.Story;
 import io.restassured.response.Response;
 import net.datafaker.Faker;
 import org.junit.jupiter.api.DisplayName;
@@ -9,10 +11,13 @@ import org.junit.jupiter.api.Test;
 
 import static org.hamcrest.Matchers.*;
 
+
+@Epic("CaseApiTest")
 public class CaseApiTest {
     CaseApi caseApi = new CaseApi();
 
     @Test
+    @Story("Получение конкретного Test Case")
     @DisplayName("API-005 Получение конкретного Test Case")
     void getTestCaseTest(){
         int caseId = 67;
@@ -24,6 +29,7 @@ public class CaseApiTest {
     }
 
     @Test
+    @Story("Получение несуществующего Test Case")
     @DisplayName("API-006 Получение несуществующего Test Case")
     void getNonExistentTestCaseTest() {
         int caseId = 999_999_999;
@@ -34,6 +40,7 @@ public class CaseApiTest {
     }
 
     @Test
+    @Story("Создание Test Case")
     @DisplayName("API-007 Создание Test Case")
     void addTestCaseTest(){
         Faker faker = new Faker();
@@ -65,6 +72,7 @@ public class CaseApiTest {
     }
 
     @Test
+    @Story("Обновление Test Case")
     @DisplayName("API-008 Обновление Test Case")
     void updateTestCaseTest(){
         Faker faker = new Faker();
