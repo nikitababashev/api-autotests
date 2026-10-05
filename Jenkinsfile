@@ -23,6 +23,7 @@ pipeline {
             }
 
         }
+    }
 
     post {
 
@@ -31,9 +32,6 @@ pipeline {
             junit 'build/test-results/test/binary/*.xml'
 
         }
-
-    }
-
 
     }
 
