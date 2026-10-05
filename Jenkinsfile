@@ -2,7 +2,17 @@ pipeline {
 
     agent any
 
+
+    environment {
+
+        TEST_EMAIL = credentials('TEST_EMAIL')
+        TEST_API_KEY = credentials('TEST_API_KEY')
+
+    }
+
+
     stages {
+
 
         stage('API Tests') {
 
@@ -13,6 +23,7 @@ pipeline {
             }
 
         }
+
 
     }
 
